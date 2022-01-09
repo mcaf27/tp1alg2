@@ -78,8 +78,10 @@ fn = mat[c2][c1]
 
 precision = tp / (tp + fp)
 recall = tp / (tp + fn)
+accuracy = (tp + tn) / (tp + tn + fp + fn)
 
-print(f'precisão: {precision:.4f} / revocação: {recall:.4f}')
+print(f'precisão: {precision} / revocação: {recall} / acurácia: {accuracy}')
 
-print(f'tempo para construir árvore: {time_to_build_tree:.4f} / tempo para realizar o algoritmo knn: {time_knn:.4f}')
-print(f'tempo médio para cada ponto: {(time_knn/len(test)):.4f}')
+print(f'tempo para construir árvore: {time_to_build_tree}')
+print(f'tempo para realizar o algoritmo knn: {time_knn}')
+print(f'tempo médio para cada ponto: {(time_knn/len(test))}')
