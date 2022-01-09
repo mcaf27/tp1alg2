@@ -58,7 +58,7 @@ class KDTree:
                 self.knn(v.left, P, queue, depth + 1)
                 self.knn(v.right, P, queue, depth + 1)
             else:
-                if P[axis] == v.element:
+                if P[axis] < v.element:
                     self.knn(v.left, P, queue, depth + 1)
                 else:
                     self.knn(v.right, P, queue, depth + 1)
